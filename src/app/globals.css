@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.Montserrat {
+  font-family: Montserrat, "Montserrat Fallback";
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
