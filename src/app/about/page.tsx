@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Banner from "@/app/components/Banner";
 import Logo from "@/app/components/Logo";
+import Link from "next/link";
+import Image from "next/image";
 const About = () => {
   const pathname = usePathname();
   const isAbout = pathname === "/about";
@@ -43,30 +45,30 @@ const About = () => {
 
             <ul className="flex justify-center space-x-[60px] items-center max-md:hidden">
               <li>
-                <a href="/" className="text-black font-semibold text-[16px]">
+                <Link href="/" className="text-black font-semibold text-[16px]">
                   TRANG CHỦ
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="text-black text-[16px]">
+                <Link href="/about" className="text-black text-[16px]">
                   VỀ AMOR
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/menu" className="text-black text-[16px]">
+                <Link href="/menu" className="text-black text-[16px]">
                   MENU
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/khoi-nghiep" className="text-black text-[16px]">
+                <Link href="/khoi-nghiep" className="text-black text-[16px]">
                   KHỞI NGHIỆP
-                </a>
+                </Link>
               </li>
             </ul>
 
             <div className="phone_contact flex items-center gap-5 max-md:hidden">
               <div className="phone_number flex items-center">
-                <img src="/assets/img/mobile-black.png" alt="Mobile icon" />
+                <Image src="/assets/img/mobile-black.png" alt="Mobile icon" />
                 <a
                   href="tel:0902328586"
                   className="text-black font-bold font-[Montserrat] text-[18px] ml-[10px]"
@@ -76,12 +78,12 @@ const About = () => {
               </div>
 
               <div className="contact py-[12px] px-[32px] bg-[#824435] rounded-full">
-                <a href="#" className="flex items-center">
-                  <img src="/assets/img/contact-now.png" alt="Icon liên hệ" />
+                <Link href="#" className="flex items-center">
+                  <Image src="/assets/img/contact-now.png" alt="Icon liên hệ" />
                   <span className="ml-[10px] text-white font-semibold text-[17px]">
                     Liên hệ ngay
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
             <div
@@ -114,7 +116,7 @@ const About = () => {
 
               {/* Logo */}
               <div className="mb-6">
-                <img
+                <Image
                   src="/assets/img/Amor-Logo-about.png"
                   alt="Logo"
                   className="w-[120px]"
@@ -125,36 +127,36 @@ const About = () => {
             {/* Menu Items */}
             <ul className="space-y-6 mt-10 text-center">
               <li>
-                <a
+                <Link
                   href="/"
                   className="text-black text-lg font-medium block cursor-pointer"
                 >
                   TRANG CHỦ
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/about"
                   className="text-black text-lg font-bold block cursor-pointer"
                 >
                   VỀ AMOR
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/menu"
                   className="text-black text-lg font-medium block cursor-pointer"
                 >
                   MENU
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/khoi-nghiep"
                   className="text-black text-lg font-medium block cursor-pointer"
                 >
                   KHỞI NGHIỆP
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
